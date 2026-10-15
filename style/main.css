@@ -9,8 +9,8 @@
 :root{
     --cor-de-fundo: #191A19;
     --cor-de-blocos: #292B28;
-    --cor-de-destaque: rgb(255, 0, 0);
-    --cor-de-destaque-opacidade: #c8753d86;
+    --cor-de-destaque: #ff0000;
+    --cor-de-destaque-opacidade: #ff000086;
     --opacidade-do-fundo: #191a19c1;
     --texto: white;
     --sombra: #545454;
@@ -69,7 +69,7 @@ nav li{
     transition: 1s;    
 }
 nav li:hover{
-    background-image: radial-gradient(circle, var(--cor-de-destaque-opacidade), transparent 70%);
+    background-image: radial-gradient(circle, var(--cor-de-destaque), transparent 70%);
     
 }
 nav li a{
@@ -114,6 +114,7 @@ inicio img{
 
     border-radius: 11px;
     
+    scroll-margin-top: 80px;
 
     background-image: url(/images/cidade_background.jpg);
     background-size: cover;
