@@ -9,7 +9,7 @@
 :root{
     --cor-de-fundo: #191A19;
     --cor-de-blocos: #292B28;
-    --cor-de-destaque: #ff0000;
+    --cor-de-destaque: #fc0000;
     --cor-de-destaque-opacidade: #ff000086;
     --opacidade-do-fundo: #191a19c1;
     --texto: white;
@@ -84,6 +84,10 @@ main{
     margin: auto;
     
 }
+h2{
+    font-family: var(--fonte-de-titulo);
+    font-size: 100px;
+}
 #inicio{
     height: 500px; 
     background-image: url(../images/quarto_background.jpg);
@@ -104,12 +108,12 @@ main{
     background-color: var(--opacidade-do-fundo);
 }
 
-#jogo{
+#jogo, #personagens-exibicao{
     width: 95%;
     min-height: 450px;
     margin: 70px auto 50px auto;
 
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.611);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.822);
 
     border-radius: 11px;
     
@@ -152,28 +156,63 @@ main{
 
     border-left: solid 3px var(--cor-de-destaque);
 }
-.centralizar-elementos-jogo h2{
-    font-family: var(--fonte-de-titulo);
-    font-size: 100px;
-}
+
 .centralizar-elementos-jogo > aside > p{
     font-family: var(--fonte-de-texto);
     font-size: 20px;
 }
 
+/* ---------------------------------- Personagens ---------------------------------- */
 
+#personagens-exibicao{
+    margin: 0 auto;
 
-footer{
+    background-image: url(../images/sala_gravacao_background.jpg);
+}
+#personagens{
+    width: 100%;
+    scroll-margin-top: 70px;
+}
+#personagens h2{
+    color: var(--cor-de-destaque);
+    text-align: center;
+}
+#posicionamento-cards{
+    width: 769px;
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+.cards-personagens{
     background-color: var(--cor-de-blocos);
     padding: 10px;
-    margin-top: 40px;
+    border-radius: 11px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    font-family: var(--fonte-de-texto);
+
+    
+
+    cursor: pointer;
 }
-footer p {
-    text-align: center;
-    font-size: 25px;
-    font-family: var(--fonte-de-titulo);
-    color: var(--cor-de-destaque);
+.cards-personagens:hover{
+    box-shadow: 4px 4px 6px black;
+    transform: translate(-4px, -4px);
 }
+.cards-personagens img{
+    width: 100px;
+
+    border-radius: 11px;
+    
+}
+
+/* ---------------------------------- Trailer ---------------------------------- */
+
 #trailer{
     width: 100%;
     display: flex;
@@ -186,9 +225,23 @@ footer p {
     background-size: cover;
 }
 #trailer iframe{
-    box-shadow: 0px 0px 50px var(--cor-de-destaque-opacidade);
+    box-shadow: 0px 0px 20px var(--cor-de-destaque-opacidade);
 
     border-radius: 11px;
 }
+
+/* ---------------------------------- Rodapé ---------------------------------- */
+
+footer{
+    background-color: var(--cor-de-blocos);
+    padding: 10px;
+    margin-top: 40px;
+}
+footer p {
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--fonte-de-titulo);
+}
+
 
 
