@@ -91,9 +91,6 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
 }
-inicio img{
-    box-shadow: 20px 20px 0px black;
-}
 .centralizar-elementos-inicio{
    
     height: 100%;
@@ -111,6 +108,8 @@ inicio img{
     width: 95%;
     min-height: 450px;
     margin: 70px auto 50px auto;
+
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.611);
 
     border-radius: 11px;
     
@@ -162,6 +161,8 @@ inicio img{
     font-size: 20px;
 }
 
+
+
 footer{
     background-color: var(--cor-de-blocos);
     padding: 10px;
@@ -173,11 +174,21 @@ footer p {
     font-family: var(--fonte-de-titulo);
     color: var(--cor-de-destaque);
 }
-video{
-    width: 768px;
-    border-radius: 11px;
-    display: block;
-    margin: auto;
-    box-shadow: 0px 0px 30px var(--cor-de-destaque-opacidade);
+#trailer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    background-color: var(--cor-de-blocos);
+    background-image: url(/images/hospital_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+#trailer iframe{
+    box-shadow: 0px 0px 50px var(--cor-de-destaque-opacidade);
+
+    border-radius: 11px;
+}
+
 
