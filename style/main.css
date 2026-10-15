@@ -1,0 +1,71 @@
+
+:root{
+    --cor-de-fundo: #191A19;
+    --cor-de-blocos: #292B28;
+    --cor-de-destaque: #C8753D;
+    --texto: white;
+    --sombra: #545454;
+
+    --fonte-de-titulo: "Bebas Neue", sans-serif;
+    --fonte-de-texto: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* Fonte de titulos */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--texto);
+}
+
+/* ---------------------------------- Header ---------------------------------- */
+
+header{
+    width: 100%; 
+    height: 70px;
+
+    background-color: var(--cor-de-blocos);
+    border-bottom: solid 2px var(--cor-de-destaque);
+
+    position: sticky;
+    top: 0;
+}
+nav{
+    width: 768px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+nav li{
+    font-family: var(--fonte-de-titulo);
+    font-weight: bolder;
+    font-size: 25px; 
+    list-style-type: none;
+}
+nav li a{
+    color: var(--texto);
+    text-decoration: none;
+}
+
+
+/* ---------------------------------- Corpo do site ---------------------------------- */
+main{
+    width: 768px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
