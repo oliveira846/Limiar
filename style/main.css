@@ -86,7 +86,7 @@ main{
 }
 #inicio{
     height: 500px; 
-    background-image: url(images/quarto_background.jpg);
+    background-image: url(/images/quarto_background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,7 +115,7 @@ main{
     
     scroll-margin-top: 80px;
 
-    background-image: url(images/cidade_background.jpg);
+    background-image: url(/images/cidade_background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -180,7 +180,7 @@ footer p {
     justify-content: center;
     padding: 20px 0px;
     background-color: var(--cor-de-blocos);
-    background-image: url(images/hospital_background.jpg);
+    background-image: url(/images/hospital_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
