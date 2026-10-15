@@ -9,7 +9,7 @@
 :root{
     --cor-de-fundo: #191A19;
     --cor-de-blocos: #292B28;
-    --cor-de-destaque: #C8753D;
+    --cor-de-destaque: rgb(255, 0, 0);
     --cor-de-destaque-opacidade: #c8753d86;
     --opacidade-do-fundo: #191a19c1;
     --texto: white;
