@@ -84,7 +84,7 @@ main{
     margin: auto;
     
 }
-h2{
+h2, #personagens-exibicao h3{
     font-family: var(--fonte-de-titulo);
     font-size: 100px;
 }
@@ -125,7 +125,7 @@ h2{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.centralizar-elementos-jogo{
+.centralizar-elementos{
     width: 768px;
     height: 450px;
 
@@ -133,9 +133,10 @@ h2{
 
     display: flex;
 }
-.centralizar-elementos-jogo img{
+.centralizar-elementos img{
     flex: 1;
     margin: 0px 10px;
+    width: 300px;
 
     /* animação de corrida */
 
@@ -146,18 +147,18 @@ h2{
     0% {transform: translateX(10px);}
     100% {transform: translateX(-10px);}
 }
-.centralizar-elementos-jogo aside{
+.centralizar-elementos aside{
     flex: 1;
     margin-left: 10px;
     padding: 10px;
     height: 100%;
 
-    background-image: linear-gradient(90deg, black 70%, transparent);
+    background-image: linear-gradient(90deg, black 90%, transparent);
 
     border-left: solid 3px var(--cor-de-destaque);
 }
 
-.centralizar-elementos-jogo > aside > p{
+.centralizar-elementos > aside > p{
     font-family: var(--fonte-de-texto);
     font-size: 20px;
 }
@@ -169,6 +170,9 @@ h2{
 
     background-image: url(../images/sala_gravacao_background.jpg);
 }
+#personagens-exibicao img{
+    animation: none;
+}
 #personagens{
     width: 100%;
     scroll-margin-top: 70px;
@@ -178,7 +182,7 @@ h2{
     text-align: center;
 }
 #posicionamento-cards{
-    width: 769px;
+    width: 768px;
     margin: 20px auto;
 
     display: flex;
@@ -196,8 +200,6 @@ h2{
 
     font-family: var(--fonte-de-texto);
 
-    
-
     cursor: pointer;
 }
 .cards-personagens:hover{
@@ -209,6 +211,9 @@ h2{
 
     border-radius: 11px;
     
+}
+.cards-personagens.selecionado {
+    background-color: var(--cor-de-destaque);
 }
 
 /* ---------------------------------- Trailer ---------------------------------- */
