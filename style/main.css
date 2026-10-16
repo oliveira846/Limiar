@@ -88,6 +88,9 @@ h2, #personagens-exibicao h3{
     font-family: var(--fonte-de-titulo);
     font-size: 100px;
 }
+.ancora{
+    scroll-margin-top: 80px;
+}
 #inicio{
     height: 500px; 
     background-image: url(../images/quarto_background.jpg);
@@ -117,7 +120,6 @@ h2, #personagens-exibicao h3{
 
     border-radius: 11px;
     
-    scroll-margin-top: 80px;
 
     background-image: url(../images/cidade_background.jpg);
     background-size: cover;
@@ -175,9 +177,9 @@ h2, #personagens-exibicao h3{
 }
 #personagens{
     width: 100%;
-    scroll-margin-top: 70px;
+    
 }
-#personagens h2{
+#personagens h2, #galeria h2, #arquivos h2{
     color: var(--cor-de-destaque);
     text-align: center;
 }
@@ -234,13 +236,76 @@ h2, #personagens-exibicao h3{
 
     border-radius: 11px;
 }
+/* ---------------------------------- Galeria ---------------------------------- */
+
+#posicionamento-galeria{
+    background-color: var(--cor-de-blocos);
+    width: 100%;
+
+    padding: 20px;
+
+    display: flex;
+
+    gap: 20px;
+
+    overflow: scroll;
+}
+#galeria img{
+    width: 768px;
+}
+#galeria h2{
+    color: var(--cor-de-destaque);
+    text-align: center;
+}
+
+/* ---------------------------------- Arquivos ---------------------------------- */
+
+#arquivos{
+    width: 768px;
+    margin: auto;
+    margin-top: 10px;
+}
+#arquivos > article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+    border-radius: 11px;
+}
+.cards-arquivos{
+    background-color: var(--cor-de-blocos);
+    border-radius: 11px;
+    text-align: center;
+    padding: 10px;
+
+    font-family: var(--fonte-de-texto);
+}
+.cards-arquivos img{
+    width: 130px;
+}
+#arquivos aside{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    gap: 10px;
+}
+#arquivos-texto{
+    background-color: var(--cor-de-blocos);
+    margin: 20px;
+    padding: 30px;
+
+    border-radius: 11px;
+}
+
 
 /* ---------------------------------- Rodapé ---------------------------------- */
 
 footer{
     background-color: var(--cor-de-blocos);
     padding: 10px;
-    margin-top: 40px;
+    
 }
 footer p {
     text-align: center;
