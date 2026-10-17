@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100..900;1,100..900&display=swap');
 /* Fonte de titulos */
 
 :root{
@@ -17,6 +19,7 @@
 
     --fonte-de-titulo: "Bebas Neue", sans-serif;
     --fonte-de-texto: "Inter", sans-serif;
+    --fonte-arquivos: "Grenze", serif;
 }
 
 
@@ -282,11 +285,13 @@ p{
     padding: 10px;
 
     font-family: var(--fonte-de-texto);
+
+    cursor: pointer;
 }
 .cards-arquivos img{
-    width: 130px;
+    width: 90px;
 }
-#arquivos aside{
+#arquivos-cards{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -294,19 +299,33 @@ p{
     gap: 10px;
 }
 #arquivos-texto{
+    display: none;
+
     background-color: var(--cor-de-blocos);
-    margin: 20px;
-    padding: 30px;
+    background-image: url(../images/folha.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    color: black;
+
+    margin-top: 20px;
+    padding: 250px 80px 40px 80px;
     border-radius: 11px;
-}
 
+    height: 960px;
+}
+#arquivos-texto > p{
+    font-family: var(--fonte-arquivos);
+    font-size: 20px;
+}
 
 /* ---------------------------------- Rodapé ---------------------------------- */
 
 footer{
     background-color: var(--cor-de-blocos);
     padding: 10px;
+    margin-top: 40px;
     
 }
 footer p {

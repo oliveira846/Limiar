@@ -65,4 +65,76 @@ cards.forEach(function(card) {
 
 });
 
+const arquivos = {
+    file1: {
+        texto: ``
+    },
+    file2: {
+        texto: ``
+    },
+    file3: {
+        texto: `FILE #003 — RELATÓRIO DE MANUTENÇÃO
+
+                LOCAL: Subsolo — Setor B <br>
+                DATA: 12/10/1998 <br>
+                RESPONSÁVEL: Equipe de Manutenção <br>
+                STATUS: PENDENTE <br>
+
+                Durante a inspeção de rotina, foi identificada uma falha no sistema de iluminação do corredor de acesso ao Setor B. <br>
+                O problema ocorre de maneira intermitente, sempre acompanhado por interferências nos aparelhos de comunicação. <br>
+                Dois funcionários relataram ouvir seus próprios nomes sendo chamados pelo rádio, apesar de não haver transmissões registradas na central.
+                A substituição dos componentes elétricos não solucionou o problema. <br>
+                RECOMENDAÇÃO: Suspender temporariamente o acesso ao corredor até a conclusão da análise técnica. <br>
+                Solicitação de manutenção adicional: NEGADA.`
+    },
+    file4: {
+        texto: `FILE 004 — TRANSCRIÇÃO DE ÁUDIO <br><br>
+
+                IDENTIFICAÇÃO: FITA 07-B  <br>
+                DATA: NÃO IDENTIFICADA  <br>
+                ORIGEM: DESCONHECIDA  <br>
+                DURAÇÃO: 00:42 <br><br>
+
+                00:00 — Ruído estático. <br>
+
+                00:06 — Som de passos sobre uma superfície rígida. <br>
+
+                00:11 — Voz feminina não identificada: Você está me ouvindo? <br>
+
+                00:17 — Silêncio. <br>
+
+                00:23 — Voz feminina: Eu acho que tem alguém do outro lado. <br>
+
+                00:29 — Interferência intensa. Trecho incompreensível. <br>
+
+                00:36 — Voz feminina, sussurrando: Não desligue. <br>
+
+                00:42 — Fim da gravação. <br>
+
+                NOTA DO ARQUIVISTA: A fita foi encontrada sem identificação. A gravação original apresenta aproximadamente dois minutos de material magnético, embora apenas 42 segundos de áudio possam ser reproduzidos. <br>
+
+                Análise adicional não autorizada.`
+    }
+}
+
+
+
+function clicarArquivos(cards){
+    const textoArquivos = document.querySelector("#descricaoArquivos");
+    const blocoArquivos = document.querySelector("#arquivos-texto");
+
+    if(cards === "d"){
+        blocoArquivos.style.display = "block";
+        textoArquivos.textContent = "";
+        textoArquivos.innerHTML = arquivos["file4"].texto;
+    } else if (cards == "c") {
+        blocoArquivos.style.display = "block";
+        textoArquivos.textContent = "";
+        textoArquivos.innerHTML = arquivos["file3"].texto;
+    } 
+
+    
+}
+
+
 
