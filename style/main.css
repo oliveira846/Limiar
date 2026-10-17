@@ -301,8 +301,8 @@ p{
 #arquivos-texto{
     display: none;
 
-    background-color: var(--cor-de-blocos);
-    background-image: url(../images/folha.jpg);
+
+    background-image: url(../images/folha.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -333,6 +333,3 @@ footer p {
     font-size: 25px;
     font-family: var(--fonte-de-titulo);
 }
-
-
-

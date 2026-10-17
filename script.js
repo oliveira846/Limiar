@@ -67,10 +67,42 @@ cards.forEach(function(card) {
 
 const arquivos = {
     file1: {
-        texto: ``
+        texto: `FILE #001 — REGISTRO DE OCORRÊNCIA<br><br>
+
+                LOCAL: Hospital Santa Áurea  <br>
+                DATA: 17/08/1998  <br>
+                SETOR: Administração  <br>
+                STATUS: ARQUIVADO<br>
+
+                Às 23h47, a equipe de segurança recebeu uma reclamação referente a ruídos provenientes da ala leste, atualmente interditada para manutenção.<br><br>
+
+                Segundo o funcionário responsável pela ronda, os sons se assemelhavam a uma conversa entre duas pessoas, embora nenhuma presença tenha sido identificada no local.<br><br>
+
+                Uma segunda inspeção foi realizada às 00h12. Nenhuma irregularidade foi encontrada.<br><br>
+
+                OBSERVAÇÃO: A ala leste permanece sem fornecimento de energia elétrica desde o dia 11.<br><br>
+
+                Registro encerrado por ausência de evidências.`
     },
     file2: {
-        texto: ``
+        texto: `FILE #002 — MEMORANDO INTERNO <br><br>
+
+        ORIGEM: Departamento de Pesquisa<br>
+        DESTINO: Equipe Técnica<br>
+        DATA: 03/09/1998<br>
+        CLASSIFICAÇÃO: RESTRITO<br>
+
+        Todos os equipamentos de reprodução e gravação de áudio deverão ser desligados após o encerramento das atividades.<br><br>
+
+        Foi constatado que determinados aparelhos permanecem em funcionamento mesmo após a interrupção do fornecimento de energia.<br><br>
+
+        A equipe de manutenção atribuiu o fenômeno a falhas nos circuitos internos.<br><br>
+
+        Solicitamos que qualquer gravação produzida fora dos horários autorizados seja encaminhada diretamente à administração.<br><br>
+
+        IMPORTANTE: Não reproduzir fitas de origem desconhecida nas instalações do hospital.<br><br>
+
+        Este memorando não deverá ser divulgado fora do departamento.`
     },
     file3: {
         texto: `FILE #003 — RELATÓRIO DE MANUTENÇÃO
@@ -131,7 +163,15 @@ function clicarArquivos(cards){
         blocoArquivos.style.display = "block";
         textoArquivos.textContent = "";
         textoArquivos.innerHTML = arquivos["file3"].texto;
-    } 
+    } else if (cards === "b"){
+        blocoArquivos.style.display = "block";
+        textoArquivos.textContent = "";
+        textoArquivos.innerHTML = arquivos["file2"].texto;
+    }else{
+        blocoArquivos.style.display = "block";
+        textoArquivos.textContent = "";
+        textoArquivos.innerHTML = arquivos["file1"].texto;
+    }
 
     
 }
