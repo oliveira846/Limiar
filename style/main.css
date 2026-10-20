@@ -82,10 +82,8 @@ nav li a{
 
 
 /* ---------------------------------- Corpo do site ---------------------------------- */
-main{
-    
+main{    
     margin: auto;
-    
 }
 h2, #personagens-exibicao h3{
     font-family: var(--fonte-de-titulo);
@@ -246,14 +244,53 @@ p{
 #posicionamento-galeria{
     background-color: var(--cor-de-blocos);
     width: 100%;
-
     padding: 20px;
 
     display: flex;
-
     gap: 20px;
 
     overflow: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+}
+#posicionamento-galeria img{
+    scroll-snap-align: start;
+}
+#posicionamento-galeria::-webkit-scrollbar{
+    display: none;
+}
+#posicionamento-galeria::scroll-button(right),#posicionamento-galeria::scroll-button(left){
+    content: ">";
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--cor-de-destaque);
+    background-color: var(--cor-de-blocos);
+    border: 3px solid var(--cor-de-destaque);
+
+    font-size: 30px;
+    font-weight: bold;
+    font-family: var(--fonte-de-titulo);
+
+    position-anchor: --carousel;
+    position: absolute;
+    top: anchor(center);
+    
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+}
+#posicionamento-galeria::scroll-button(left){
+    content: "<";
+    left: 40px;
+}
+#posicionamento-galeria::scroll-button(right){
+    content: ">";
+    right: 40px;
 }
 #galeria img{
     width: 768px;
@@ -262,6 +299,7 @@ p{
     color: var(--cor-de-destaque);
     text-align: center;
 }
+
 
 /* ---------------------------------- Arquivos ---------------------------------- */
 
@@ -332,4 +370,157 @@ footer p {
     text-align: center;
     font-size: 25px;
     font-family: var(--fonte-de-titulo);
+}
+
+/* ---------------------------------- Responsividade ---------------------------------- */
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: 70px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    header{
+        height: 40px;
+    }
+    nav{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    ul{
+        justify-content: space-around;
+    }
+    nav li{
+        font-size: 20px;
+        padding: 2px 0px;
+    }
+    #inicio{
+        height: 200px;
+    }
+    #inicio img{
+        width: 90%;
+        
+    }
+    .centralizar-elementos{
+        width: 90%;
+        flex-direction: column;
+        height: max-content;
+    }
+    .centralizar-elementos aside{
+
+        border-top: solid 3px var(--cor-de-destaque);
+        border-left: solid 3px transparent;
+
+        background-image: linear-gradient(180deg, black 90%, transparent);
+
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    .centralizar-elementos img{
+        flex: 1;
+        margin: 0px 10px;
+        width: 250px;
+        margin: auto;
+        margin-top: 20px;
+
+
+        /* animação de corrida */
+
+        animation: none;
+        
+    }
+    #jogo, #personagens-exibicao{
+        margin: 30px auto 50px auto;
+        background-image: none;
+    }
+    #trailer iframe{
+        height: 200px;
+        border-radius: 0px;
+
+    }
+    #posicionamento-cards{
+        width: 100%;
+
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+    }
+    .cards-personagens img{
+        width: 60px;
+    }
+    #arquivos{
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    #arquivos-cards{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .cards-arquivos img{
+        width: 50px;
+    }
+    #arquivos-texto{
+        display: none;
+
+
+        background-image: none;
+        background-color: var(--cor-de-blocos);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        color: black;
+
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+
+        height: max-content;
+    }
+    #arquivos-texto > p{
+        font-family: var(--fonte-arquivos);
+        font-size: 20px;
+        color: white;
+    }
+    #posicionamento-galeria img{
+        scroll-snap-align: start;
+        width: 100%;
+        border-radius: 5px;
+    }
+    #posicionamento-galeria{
+        padding: 5px;
+    }
+    #posicionamento-galeria::scroll-button(right),#posicionamento-galeria::scroll-button(left){
+        content: ">";
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: var(--cor-de-destaque);
+        background-color: var(--cor-de-blocos);
+        border: 3px solid var(--cor-de-destaque);
+
+        font-size: 30px;
+        font-weight: bold;
+        font-family: var(--fonte-de-titulo);
+
+        position-anchor: --carousel;
+        position: absolute;
+        top: anchor(bottom);
+        
+        transform: translateY(-100%);
+
+        cursor: pointer;
+
+    }
+    #posicionamento-galeria::scroll-button(left){
+        content: "<";
+        left: 20px;
+    }
+    #posicionamento-galeria::scroll-button(right){
+        content: ">";
+        right: 20px;
+    }
 }
